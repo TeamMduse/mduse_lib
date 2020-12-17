@@ -24,28 +24,20 @@ MonoBehaviour:
     m_Scopes: []
     m_IsDefault: 1
     m_Capabilities: 7
-  - m_Id: scoped:Unity
-    m_Name: Unity
-    m_Url: http://packages.unity.com
-    m_Scopes:
-    - Entities
-    m_IsDefault: 0
-    m_Capabilities: 7
-  m_UserSelectedRegistryName: Unity
+  m_UserSelectedRegistryName: 
   m_UserAddingNewScopedRegistry: 0
   m_RegistryInfoDraft:
     m_ErrorMessage: 
     m_Original:
-      m_Id: scoped:Unity
-      m_Name: Unity
-      m_Url: http://packages.unity.com
-      m_Scopes:
-      - Entities
+      m_Id: 
+      m_Name: 
+      m_Url: 
+      m_Scopes: []
       m_IsDefault: 0
-      m_Capabilities: 7
+      m_Capabilities: 0
     m_Modified: 0
-    m_Name: Unity
-    m_Url: http://packages.unity.com
+    m_Name: 
+    m_Url: 
     m_Scopes:
-    - Entities
+    - 
     m_SelectedScopeIndex: 0

@@ -1,10 +1,12 @@
 ﻿using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
+using Unity.Rendering;
 using UnityEngine;
 
 public class SpawnAtomBonds : MonoBehaviour
 {
+      
     [SerializeField] private GameObject gameObjectPrefab;
 
     private Entity entityPrefab;
@@ -14,7 +16,7 @@ public class SpawnAtomBonds : MonoBehaviour
 
     void Start()
     {
-        // Valores por defecto.
+        // Default values.
         defaultWorld = World.DefaultGameObjectInjectionWorld;
         entityManager = defaultWorld.EntityManager;
 
@@ -24,13 +26,13 @@ public class SpawnAtomBonds : MonoBehaviour
         entityPrefab = GameObjectConversionUtility.ConvertGameObjectHierarchy(gameObjectPrefab, settings);
 
 
-        InstantiateEntity(new float3(0.0f, 0.0f, 0.0f));
+        //InstatiateEntitiesCloud();
 
-        MakeEntity();
+
     }
 
 
-    private void InstantiateEntity(float3 position) {
+    public void InstantiateEntity(float3 position) {
 
         Entity myEntity = entityManager.Instantiate(entityPrefab);
         entityManager.SetComponentData(myEntity, new Translation
@@ -38,6 +40,17 @@ public class SpawnAtomBonds : MonoBehaviour
             Value = position
         });
     }
+
+    private void InstatiateEntitiesCloud() {
+        for (int i = 0; i < 100; i++)
+        {
+
+            float3 pos = new float3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
+            InstantiateEntity(pos);
+
+        }
+    }
+
 
     private void MakeEntity() {
 
