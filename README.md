@@ -120,7 +120,7 @@ $$
 ## UML diagrams
 
 You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
+<div class="mermaid">
 ```mermaid
 sequenceDiagram
 Alice ->> Bob: Hello Bob, how are you?
@@ -142,3 +142,5 @@ A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
 ```
+	</div>
+	
